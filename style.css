@@ -45,4 +45,166 @@ body {
   color: white;
 }
 
+#icons img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Center and style the dialog box */
+dialog {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Prominent shadow for depth */
+  padding: 25px;
+  width: 450px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  background: linear-gradient(to bottom right, #ffffff, #f4f4f4); /* Subtle gradient */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.4s ease-in-out;
+  z-index: 10;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Backdrop styling */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6); /* Dark, slightly transparent backdrop */
+}
+
+/* Header styling */
+dialog h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+/* Form styling */
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label styling */
+dialog label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Input field styling */
+dialog input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 95%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+dialog input:focus {
+  outline: none;
+  border-color: #0078d7;
+  box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+/* Buttons styling */
+dialog button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+dialog #submit {
+  background-color: #0078d7; /* Primary button color */
+  color: white;
+  font-size: 16px;
+}
+
+dialog #submit:hover {
+  background-color: #005a9e;
+  box-shadow: 0 4px 8px rgba(0, 120, 215, 0.4);
+}
+
+dialog #closeModal {
+  background-color: #454645; /* Close button color */
+  color: white;
+  font-size: 16px;
+}
+
+dialog #closeModal:hover {
+  background-color: #a71d2a;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+/* Country data section styling */
+#countryData {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+/* Style the icons container and position it bottom-left */
+#icons {
+  position: fixed; /* Fixed positioning */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  left: 20px; /* Distance from the left of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  z-index: 5; /* Lower than the dialog */
+}
+
+#icons img {
+  width: 80px; /* Adjust size */
+  height: 80px;
+  border-radius: 50%; /* Circular icon */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#icons p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
